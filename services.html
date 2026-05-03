@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailoring Services in Tanjung Batu | Custom Dresses | fyshionze.store</title>
+  <meta name="description" content="Layanan jahit premium di Tanjung Batu: custom dress, bridal tailoring, alterations, dan designer wear. Ladies tailor terbaik di Sawang, Tanjung Batu 29662 — La Fyshionzè Tailor.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fyshionze.store/services.html">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── SERVICES PAGE ONLY ── */
+
+    .service-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      position: relative;
+    }
+    .service-split-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .service-split-img .img-placeholder {
+      height: 100%;
+      min-height: 600px;
+      transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .service-split:hover .service-split-img .img-placeholder {
+      transform: scale(1.04);
+    }
+
+    .service-peek-img {
+      position: absolute;
+      bottom: -80px;
+      right: -40px;
+      width: 260px;
+      height: 320px;
+      z-index: 10;
+      border: 6px solid var(--ivory);
+      box-shadow: 0 20px 50px rgba(61,43,31,0.22);
+      overflow: hidden;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .service-peek-img:hover { transform: translateY(-8px) rotate(-1deg); }
+    .service-peek-img .img-placeholder { height: 100%; }
+
+    /* Reverse: image goes right, text left */
+    .service-split.reverse .service-split-img { order: 2; }
+    .service-split.reverse .service-split-body { order: 1; }
+    .service-split.reverse .service-peek-img { right: auto; left: -40px; }
+
+    .service-split-body {
+      padding: 5.5rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--white);
+    }
+    .service-split.bg-cream .service-split-body { background: var(--cream); }
+
+    .service-split-body > p {
+      max-width: 500px;
+      font-size: 0.92rem;
+      line-height: 1.85;
+      color: var(--brown);
+      margin-bottom: 1rem;
+    }
+    .service-split-body h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--brown);
+      margin-top: -0.25rem;
+      line-height: 1.3;
+    }
+
+    .service-split-body ul {
+      margin: 1.5rem 0 2.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .service-split-body ul li {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      color: var(--brown);
+      line-height: 1.4;
+    }
+    .service-split-body ul li .check {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      border: 1px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6rem;
+      color: var(--gold);
+    }
+
+    .service-wave { line-height: 0; position: relative; z-index: 5; }
+    .service-wave svg { display: block; width: 100%; height: 80px; }
+
+    .card-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .section-wave-bottom {
+      position: absolute;
+      bottom: -1px; left: 0; right: 0;
+      line-height: 0;
+    }
+    .section-wave-bottom svg { display: block; width: 100%; height: 70px; }
+
+    .cta-banner .script-text {
+      color: var(--gold);
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .service-split,
+      .service-split.reverse { grid-template-columns: 1fr; }
+      .service-split.reverse .service-split-img,
+      .service-split.reverse .service-split-body { order: unset; }
+      .service-peek-img { display: none; }
+      .service-split-body { padding: 3.5rem 2rem; }
+      .service-split-img .img-placeholder { min-height: 380px; }
+      .service-split-body > p { max-width: 100%; }
+      .card-duo { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .service-split-body { padding: 2.5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body class="loading">
+
+  <div class="custom-cursor" id="cursor" aria-hidden="true"></div>
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-needle"></div>
+    <div class="loader-brand">
+      <span class="script">La Fyshionzè</span>
+      <span class="sub">Services · fyshionze.store</span>
+    </div>
+    <svg class="loader-wave" viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,10 Q50,5 100,10 T200,10 Q250,15 300,10 T400,10" stroke="var(--gold)" stroke-width="3" fill="none" stroke-linecap="round">
+        <animate attributeName="stroke-dasharray" values="0,400;200,200;400,0" dur="2.2s" repeatCount="indefinite" />
+      </path>
+    </svg>
+  </div>
+
+  <div class="lang-toggle solid-bg" role="group" aria-label="Language selector">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="id">ID</button>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar transparent" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="La Fyshionzè Tailor Home">
+          La Fyshionzè Tailor
+          <span>fyshionze.store</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html" class="Home" data-en="Home" data-id="Beranda">Home</a></li>
+          <li><a href="gallery.html" class="Gallery" data-en="Gallery" data-id="Desain">Gallery</a></li>
+          <li><a href="services.html" data-en="Services" data-id="Layanan">Services</a></li>
+          <li><a href="about.html" data-en="About" data-id="Tentang">About</a></li>
+          <li><a href="contact.html" data-en="Contact" data-id="Kontak">Contact</a></li>
+        </ul>
+        <a href="https://wa.me/6281234567890" class="nav-cta" data-wa data-en="Book Now" data-id="Pesan Sekarang">Book Now</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" data-en="Home" data-id="Beranda">Home</a>
+    <a href="services.html" data-en="Services" data-id="Layanan">Services</a>
+    <a href="about.html" data-en="About" data-id="Tentang">About</a>
+    <a href="contact.html" data-en="Contact" data-id="Kontak">Contact</a>
+    <a href="https://wa.me/6281234567890" data-wa style="color:var(--gold);" data-en="Book via WhatsApp" data-id="Pesan via WhatsApp">Book via WhatsApp</a>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Services hero">
+      <div style="position:absolute;inset:0;background:linear-gradient(160deg,#2a1a12 0%,#5c3d2e 100%);"></div>
+      <div class="container">
+        <span class="eyebrow" style="color:var(--gold);" data-en="What We Create" data-id="Yang Kami Ciptakan">What We Create</span>
+        <span class="script-text" style="font-size:clamp(3rem,7vw,5.5rem);" data-en="Our Services" data-id="Layanan Kami">Our Services</span>
+        <h1 data-en="Professional Ladies Tailoring" data-id="Jahit Wanita Profesional">Professional Ladies Tailoring</h1>
+        <p data-en="Premium tailoring for every occasion — from custom dresses in Tanjung Batu to bespoke bridal gowns across Karimun." data-id="Jahit premium untuk setiap kesempatan — dari gaun kustom di Tanjung Batu hingga gaun pengantin bespoke di seluruh Karimun.">Premium tailoring for every occasion — from custom dresses in Tanjung Batu to bespoke bridal gowns across Karimun.</p>
+      </div>
+      <div class="page-hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,40 C200,80 400,0 600,50 C800,90 1000,10 1200,45 C1320,65 1400,30 1440,50 L1440,80 L0,80 Z" fill="#ffffff"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section style="padding:5rem 0 3rem;background:var(--white);" aria-label="Services introduction">
+      <div class="container text-center">
+        <div class="fade-in" style="max-width:680px;margin:0 auto;">
+          <span class="eyebrow" data-en="La Fyshionzè Tailor — Sawang, Tanjung Batu 29662" data-id="La Fyshionzè Tailor — Sawang, Tanjung Batu 29662">La Fyshionzè Tailor — Sawang, Tanjung Batu 29662</span>
+          <span class="script-text" data-en="Fashion & Custom Dress Designs" data-id="Desain Gaun Fashion & Kustom">Fashion &amp; Custom Dress Designs</span>
+          <h2 style="font-weight:300;font-style:italic;font-size:clamp(1rem,2vw,1.4rem);margin-top:0.2rem;" data-en="in Sawang, Tanjung Batu" data-id="di Sawang, Tanjung Batu">in Sawang, Tanjung Batu</h2>
+          <div class="divider"></div>
+          <p data-en="As the leading ladies tailor in Tanjung Batu, we offer a full range of tailoring services designed to celebrate every woman's unique style. From fashion design consultations to final fittings, La Fyshionzè Tailor brings luxury craftsmanship to Sawang, Kundur, and all of Karimun." data-id="Sebagai penjahit wanita terkemuka di Tanjung Batu, kami menawarkan layanan jahit lengkap yang dirancang untuk merayakan gaya unik setiap wanita. Dari konsultasi desain fashion hingga fitting akhir, La Fyshionzè Tailor menghadirkan kerajinan mewah ke Sawang, Kundur, dan seluruh Karimun.">As the leading ladies tailor in Tanjung Batu, we offer a full range of tailoring services designed to celebrate every woman's unique style. From fashion design consultations to final fittings, La Fyshionzè Tailor brings luxury craftsmanship to Sawang, Kundur, and all of Karimun.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 1: CUSTOM DRESS -->
+    <section class="service-split" aria-labelledby="s1">
+      <div class="service-split-img fade-in-left">
+        <div class="img-placeholder" style="height:100%;min-height:600px;">
+          <div class="img-label">Custom Dress Stitching<br>Ladies Dress Tailoring<br>Tanjung Batu 29662</div>
+        </div>
+        <div class="service-peek-img">
+          <div class="img-placeholder" style="height:100%;background:linear-gradient(135deg,var(--taupe),var(--espresso));">
+            <div class="img-label" style="font-size:0.72rem;">Fabric<br>Selection</div>
+          </div>
+        </div>
+      </div>
+      <div class="service-split-body fade-in-right">
+        <span class="eyebrow" data-en="Service 01" data-id="Layanan 01">Service 01</span>
+        <span class="script-text" data-en="Custom Dress" data-id="Gaun Kustom">Custom Dress</span>
+        <h2 id="s1" data-en="Stitching & Design" data-id="Jahit & Desain">Stitching &amp; Design</h2>
+        <div class="divider divider-left"></div>
+        <p data-en="Bring your vision to life with our bespoke custom dress service. Every garment at La Fyshionzè Tailor is crafted from scratch — tailored to your exact measurements, personal style, and occasion." data-id="Wujudkan visi Anda dengan layanan gaun kustom bespoke kami. Setiap pakaian di La Fyshionzè Tailor dibuat dari awal — disesuaikan dengan ukuran tepat, gaya pribadi, dan kesempatan Anda.">Bring your vision to life with our bespoke custom dress service. Every garment at La Fyshionzè Tailor is crafted from scratch — tailored to your exact measurements, personal style, and occasion.</p>
+        <p data-en="Whether you're looking for an everyday ladies dress in Tanjung Batu or a statement piece for a special event, our fashion design experts will guide you from fabric selection to final stitch." data-id="Baik Anda mencari gaun wanita sehari-hari di Tanjung Batu atau busana istimewa untuk acara khusus, ahli desain fashion kami akan membimbing Anda dari pemilihan kain hingga jahitan terakhir.">Whether you're looking for an everyday ladies dress in Tanjung Batu or a statement piece for a special event, our fashion design experts will guide you from fabric selection to final stitch.</p>
+        <ul>
+          <li><span class="check">✓</span><span data-en="Full body measurement &amp; consultation" data-id="Pengukuran seluruh badan &amp; konsultasi">Full body measurement &amp; consultation</span></li>
+          <li><span class="check">✓</span><span data-en="Premium fabric sourcing &amp; selection" data-id="Pengadaan &amp; pemilihan kain premium">Premium fabric sourcing &amp; selection</span></li>
+          <li><span class="check">✓</span><span data-en="Multiple fitting sessions for perfect fit" data-id="Sesi fitting berulang untuk ukuran sempurna">Multiple fitting sessions for perfect fit</span></li>
+          <li><span class="check">✓</span><span data-en="Fashion design input &amp; style guidance" data-id="Masukan desain fashion &amp; panduan gaya">Fashion design input &amp; style guidance</span></li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark" data-en="Book This Service" data-id="Pesan Layanan Ini">Book This Service</a>
+      </div>
+    </section>
+
+    <!-- WAVE: white to cream -->
+    <div class="service-wave" style="background:var(--cream);" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C180,80 360,0 540,50 C720,90 900,10 1080,45 C1260,75 1380,20 1440,40 L1440,0 L0,0 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- SERVICE 2: BRIDAL -->
+    <section class="service-split reverse bg-cream" style="padding-top:5rem;" aria-labelledby="s2">
+      <div class="service-split-img fade-in-right">
+        <div class="img-placeholder" style="height:100%;min-height:600px;">
+          <div class="img-label">Bridal Tailoring<br>Tanjung Batu<br>Wedding Dress Design</div>
+        </div>
+        <div class="service-peek-img">
+          <div class="img-placeholder" style="height:100%;background:linear-gradient(135deg,var(--sand),var(--taupe));">
+            <div class="img-label" style="font-size:0.72rem;">Lace<br>Detail</div>
+          </div>
+        </div>
+      </div>
+      <div class="service-split-body fade-in-left">
+        <span class="eyebrow" data-en="Service 02" data-id="Layanan 02">Service 02</span>
+        <span class="script-text" data-en="Bridal Wear" data-id="Busana Pengantin">Bridal Wear</span>
+        <h2 id="s2" data-en="in Tanjung Batu" data-id="di Tanjung Batu">in Tanjung Batu</h2>
+        <div class="divider divider-left"></div>
+        <p data-en="Your wedding day deserves a dress as extraordinary as your love story. La Fyshionzè Tailor specializes in bridal tailoring across Tanjung Batu, Kundur, and Karimun — crafting gowns that make every bride unforgettable." data-id="Hari pernikahan Anda layak mendapat gaun setakjub kisah cinta Anda. La Fyshionzè Tailor spesialis jahit pengantin di Tanjung Batu, Kundur, dan Karimun — menciptakan gaun yang membuat setiap pengantin tak terlupakan.">Your wedding day deserves a dress as extraordinary as your love story. La Fyshionzè Tailor specializes in bridal tailoring across Tanjung Batu, Kundur, and Karimun — crafting gowns that make every bride unforgettable.</p>
+        <p data-en="From traditional Indonesian kebaya to contemporary bridal silhouettes, our fashion design expertise ensures your dress is a true reflection of you." data-id="Dari kebaya Indonesia tradisional hingga siluet pengantin kontemporer, keahlian desain fashion kami memastikan gaun Anda adalah cerminan sejati diri Anda.">From traditional Indonesian kebaya to contemporary bridal silhouettes, our fashion design expertise ensures your dress is a true reflection of you.</p>
+        <ul>
+          <li><span class="check">✓</span><span data-en="Bespoke wedding gown design consultation" data-id="Konsultasi desain gaun pengantin bespoke">Bespoke wedding gown design consultation</span></li>
+          <li><span class="check">✓</span><span data-en="Kebaya, gown &amp; modern bridal styles" data-id="Kebaya, gaun &amp; gaya pengantin modern">Kebaya, gown &amp; modern bridal styles</span></li>
+          <li><span class="check">✓</span><span data-en="Lace, beading &amp; embroidery details" data-id="Detail renda, payet &amp; bordir">Lace, beading &amp; embroidery details</span></li>
+          <li><span class="check">✓</span><span data-en="Bridesmaid &amp; family coordination available" data-id="Koordinasi gaun pengiring &amp; keluarga tersedia">Bridesmaid &amp; family coordination available</span></li>
+        </ul>
+        <a href="contact.html" class="btn btn-dark" data-en="Book Bridal Consultation" data-id="Pesan Konsultasi Pengantin">Book Bridal Consultation</a>
+      </div>
+    </section>
+
+    <!-- WAVE: cream to white -->
+    <div class="service-wave" style="background:var(--white);" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,50 C300,90 600,10 900,55 C1150,90 1300,20 1440,45 L1440,0 L0,0 Z" fill="#f5f0e8"/>
+      </svg>
+    </div>
+
+    <!-- SERVICES 3 & 4 -->
+    <section class="section-pad" style="background:var(--white);position:relative;" aria-label="More services">
+      <div class="container">
+        <div class="text-center fade-in" style="margin-bottom:4rem;">
+          <span class="eyebrow" data-en="More Services" data-id="Layanan Lainnya">More Services</span>
+          <span class="script-text" data-en="Complete Solutions" data-id="Solusi Lengkap">Complete Solutions</span>
+          <div class="divider"></div>
+        </div>
+        <div class="card-duo">
+          <article class="service-card fade-in fade-in-delay-1">
+            <div class="service-card-img">
+              <div class="img-placeholder" style="height:100%;">
+                <div class="img-label">Alterations &amp;<br>Professional Fittings</div>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <span class="eyebrow" data-en="Service 03" data-id="Layanan 03">Service 03</span>
+              <h3 data-en="Alterations & Fittings" data-id="Ubah Ukuran & Fitting">Alterations &amp; Fittings</h3>
+              <p data-en="Already love a garment but need it to fit better? Our expert ladies tailor in Sawang specializes in professional alterations — from simple hemming to complete resizing. Every body is unique, and we make sure your clothes reflect that." data-id="Sudah mencintai pakaian tapi perlu ukuran yang lebih pas? Penjahit wanita ahli kami di Sawang spesialis ubah ukuran profesional — dari hemming sederhana hingga perubahan ukuran lengkap. Setiap tubuh unik, dan kami memastikan pakaian Anda mencerminkan itu.">Already love a garment but need it to fit better? Our expert ladies tailor in Sawang specializes in professional alterations — from simple hemming to complete resizing. Every body is unique, and we make sure your clothes reflect that.</p>
+            </div>
+          </article>
+          <article class="service-card fade-in fade-in-delay-2">
+            <div class="service-card-img">
+              <div class="img-placeholder" style="height:100%;">
+                <div class="img-label">Designer Wear<br>Fashion Design<br>Tanjung Batu</div>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <span class="eyebrow" data-en="Service 04" data-id="Layanan 04">Service 04</span>
+              <h3 data-en="Designer Wear" data-id="Busana Desainer">Designer Wear</h3>
+              <p data-en="Inspired by runway trends but designed for your life. Our fashion design tailor service in Tanjung Batu creates designer-inspired pieces — with the perfect fit of bespoke tailoring. Butik wanita Tanjung Batu quality at your doorstep." data-id="Terinspirasi tren runway tapi dirancang untuk kehidupan Anda. Layanan jahit desainer kami di Tanjung Batu menciptakan karya berinspirasikan desainer — dengan ukuran sempurna jahit bespoke. Kualitas butik wanita Tanjung Batu di depan pintu Anda.">Inspired by runway trends but designed for your life. Our fashion design tailor service in Tanjung Batu creates designer-inspired pieces — with the perfect fit of bespoke tailoring. Quality at your doorstep.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="section-wave-bottom" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,35 C360,70 720,0 1080,50 C1260,70 1380,20 1440,40 L1440,70 L0,70 Z" fill="#3d2b1f"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner" aria-label="Call to action">
+      <div class="container" style="position:relative;z-index:1;">
+        <span class="eyebrow" style="color:var(--gold);" data-en="Meet Us" data-id="Temui Kami">Meet Us</span>
+        <span class="script-text" style="font-size:clamp(2rem,5vw,4rem);display:block;margin-bottom:0.5rem;" data-en="Visit Our Atelier" data-id="Kunjungi Atelier Kami">Visit Our Atelier</span>
+        <p data-en="Located in Sawang, Tanjung Batu 29662 — Kundur, Karimun, Kepulauan Riau.<br>Book a consultation via WhatsApp today." data-id="Berlokasi di Sawang, Tanjung Batu 29662 — Kundur, Karimun, Kepulauan Riau.<br>Pesan konsultasi via WhatsApp hari ini.">Located in Sawang, Tanjung Batu 29662 — Kundur, Karimun, Kepulauan Riau.<br>Book a consultation via WhatsApp today.</p>
+        <a href="https://wa.me/6281234567890" class="btn-ivory" data-wa>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--espresso)" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-en="Book a Consultation" data-id="Pesan Konsultasi">Book a Consultation</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">La Fyshionzè Tailor</div>
+          <p data-en="Premium ladies tailoring in Sawang, Tanjung Batu, Kundur, Karimun, Kepulauan Riau." data-id="Jahit wanita premium di Sawang, Tanjung Batu, Kundur, Karimun, Kepulauan Riau.">Premium ladies tailoring in Sawang, Tanjung Batu, Kundur, Karimun, Kepulauan Riau.</p>
+          <p style="margin-top:1rem;font-size:0.82rem;">📍 Sawang, Tanjung Batu, Kundur<br>Karimun, Kepulauan Riau — 29662</p>
+        </div>
+        <div class="footer-col">
+          <h5 data-en="Navigation" data-id="Navigasi">Navigation</h5>
+          <ul>
+            <li><a href="index.html" data-en="Home" data-id="Beranda">Home</a></li>
+            <li><a href="services.html" data-en="Services" data-id="Layanan">Services</a></li>
+            <li><a href="about.html" data-en="About Us" data-id="Tentang Kami">About Us</a></li>
+            <li><a href="contact.html" data-en="Contact" data-id="Kontak">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5 data-en="Connect" data-id="Hubungi">Connect</h5>
+          <ul>
+            <li><a href="https://www.instagram.com/fyshionze.tailor" target="_blank" rel="noopener">Instagram @fyshionze.tailor</a></li>
+            <li><a href="https://wa.me/6281234567890" data-wa data-en="WhatsApp Booking" data-id="Pesan via WhatsApp">WhatsApp Booking</a></li>
+            <li><a href="https://fyshionze.store">fyshionze.store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 La Fyshionzè Tailor | <a href="https://fyshionze.store" style="color:var(--gold);">fyshionze.store</a></span>
+        <span>Sawang, Tanjung Batu, Kundur, Karimun, Kepulauan Riau – 29662</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6281234567890" class="wa-float" data-wa aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
